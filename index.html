@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="website icon" type="png" href="images/pngwing.com.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -13,6 +14,23 @@
 <body>
     
     <div class="stranica">
+        <div class="burger-menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="burger-menu">
+            <ul>
+                <li><a style="color: white;" href="#o=-kompanii">О Компании</a></li>
+                <li><a style="color: white;" href="#">Доставка и оплата</a></li>
+                <li><a style="color: white;" href="#kontacti">Контакты</a></li><br><hr><br>
+                <li>
+                    <div class="time"><img src="images/clock.svg" alt=""><div>Пн-Вс 9:00 - 19:00</div></div><br>
+                    <div class="phone"><img src="images/phone.svg" alt=""><div>+7 800 888 88 88</div></div>
+                </li>
+            </ul>
+        </div>
 <div class="head">
     <img class="bg1" src="images/Mask group 1.png" alt="">
     <div class="shapka">
@@ -23,7 +41,7 @@
                 </div>
             </div>
             <div class="menu">
-                <a href="">О Компании</a><a href="">Доставка и Оплата</a><a href="">Контакты</a>
+                <a href="#o-kompanii">О Компании</a><a href="#">Доставка и Оплата</a><a href="#kontacti">Контакты</a>
             </div>
         </div>
         <div class="info-and-button">
@@ -38,7 +56,20 @@
             <p class="zagolovok-text-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
                 sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
         </div>
-        <button class="btn">оставить заявку</button>
+        <button onclick="popup.showModal()" class="btn">оставить заявку</button>
+        <div class="okno">
+        <dialog class="dgl" id="popup">
+            <form class="dialog" method="popup">
+                <h1>ЗАПОЛНИТЕ ФОРМУ</h1>
+            <P>И в ближайшее время сотрудник нашей компании свяжется с Вами</P>
+            <input type="text" placeholder="Имя"><br>
+            <input type="text" placeholder="Телефон"><br>
+            <input type="text" placeholder="Email"><br>
+                <button class="btn">Отправить</button><br>
+                <input type="checkbox"><small>Отправляя эту форму, вы даете свое согласие на обработку персональных данных в соответствии с нашей Политикой конфиденциальности.</small>
+            </form>
+        </dialog>
+    </div>
     </div>
     <div class="kategory">
         <div class="cards">
@@ -132,7 +163,7 @@
             <div class="frame">
                 <div class="frame-zagolovok">
                     <div class="frame-zagolovok-text">
-                        <p class="frame-header"><span class="frame-zagolovok-line">О Ко</span>мпании</p>
+                        <p class="frame-header" id="o-kompanii"><span class="frame-zagolovok-line">О Ко</span>мпании</p>
                     </div>
                     </div>
                     <div class="podframe">
@@ -234,7 +265,7 @@
        </div>
         <img src="images/Rectangleft.svg" alt="">
         <div class="footer-contacts">
-            <p class="contacts">КОНТАКТЫ</p>
+            <p class="contacts" id="kontacti">КОНТАКТЫ</p>
             <p class="footer-razdels">info@form.com</p>
             <p class="footer-razdels">882-587-3025</p>
             <p class="footer-razdels">6116 Willa River Suite 610</p>
@@ -249,6 +280,17 @@
     </div>
 </div>
 </div>
+
+<script>
+    
+    function toggleMenu() {
+            var menuIcon = document.querySelector('.burger-menu-icon');
+            var menu = document.querySelector('.burger-menu');
+            menuIcon.classList.toggle('open');
+            menu.classList.toggle('open');
+        }
+    
+    </script>
 
 </body>
 </html>
