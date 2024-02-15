@@ -49,7 +49,7 @@
             <div class="phone"><img src="images/phone.svg" alt=""><div>+7 800 888 88 88</div></div>
         </div>
     </div>
-    <div class="zagolovok">
+    <div class="zagolovok" id="back">
         <div class="zagolovok-texts">
             <p class="zagolovok-text-1">наша компания занимается</p>
             <p class="zagolovok-text-2">лесозаготовкой</p>
@@ -59,15 +59,18 @@
         <button onclick="popup.showModal()" class="btn">оставить заявку</button>
         <div>
         <dialog id="popup">
+            <div class="nazad">
+               <button class="back" onclick="location.reload()"><img src="images/Икс.svg" alt=""></button>
+            </div>
             <form class="dialog" method="popup">
             <div class="dialog-zagolovok">
                 <div class="dialog-zagolovok-text1"><h3>ЗАПОЛНИТЕ ФОРМУ</h3></div>
                 <div class="dialog-zagolovok-text2"><P>И в ближайшее время сотрудник нашей компании свяжется с Вами</P></div>
             </div>
             <div class="inputs-and-button">
-            <input class="input" type="text" placeholder="Имя"><br>
-            <input class="input" type="text" placeholder="Телефон"><br>
-            <input class="input" type="text" placeholder="Email"><br>
+            <input class="input inpt1" type="text" placeholder="Имя"><br>
+            <input class="input inpt2" type="text" placeholder="Телефон"><br>
+            <input class="input inpt3" type="text" placeholder="Email"><br>
                 <input type="submit" value="Отправить" class="dialog-btn" onclick="saveData()"><br>
             </div>
                 <div class="checkbox-and-text">

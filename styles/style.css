@@ -913,6 +913,31 @@ dialog {
     height: 393px;
 }
 
+.nazad{
+    position: absolute;
+    margin: 10px;
+    right: 0;
+}
+
+
+.back{
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+border-radius: 100px;
+border: 0;
+background-color: white;
+    box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.1);
+transition: box-shadow 0.5s ease;
+}
+
+.back:hover{
+    box-shadow: inset 4px 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
 .dialog-zagolovok{
 width: 311px;
 height: 61px;
@@ -955,7 +980,45 @@ border-radius: 4px;
 padding: 10px 10px 10px 20px;
 width: 295px;
 height: 50px;
+/* background-image: url(../images/user.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 50%;
+    padding-left: 50px; */
 }
+
+.inpt1{
+    background-image: url(../images/user.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 50%;
+    padding-left: 50px;
+}
+
+.inpt2{
+    background-image: url(../images/tell.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 50%;
+    padding-left: 50px;
+}
+
+.inpt3{
+    background-image: url(../images/Почта\ 3.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 50%;
+    padding-left: 50px;
+}
+
+/* .footer-input{
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    border-top: 1px solid grey;
+    border-right: 0px;
+    border-radius: 3px 0 0 3px;
+    padding: 12px 65px 12px 10px;
+    padding-left: 30px;
+    width: 33px;
+    height:15px;
+    
+    } */
 
 .check{
     width: 30px;
