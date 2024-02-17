@@ -2,308 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="website icon" type="png" href="images/pngwing.com.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <title>ЛЕСОЗАГОТОВКА</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <title>Document</title>
+
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        background: #628ECB;
+    }
+
+a {
+  position: relative;
+  color: rgb(171, 127, 127);
+  text-decoration: none;
+  text-align: center;
+  font-weight: bolder;
+  margin-left: 27%;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    margin-bottom: -5px;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #00e5ff;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.dialog{
+    background: url(../images/dialog-background.png);
+    border-radius: 10px;
+    border: 1px solid #BCCAD2;
+    height: 555px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 40px;
+    width: 370px;
+    height: 400px;
+}
+
+.links{
+    margin-top: 20px;
+    border: 1px solid #BCCAD2;
+    border-radius: 15px;
+    width: 300px;
+    background: #022B42;
+}
+
+.dialog-zagolovok{
+width: 311px;
+height: 61px;
+margin-bottom: 40px;
+}
+
+.dialog-zagolovok-text1{
+font-weight: 500;
+font-size: 20px;
+line-height: 152%;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+text-align: center;
+margin-bottom: 7px;
+}
+
+.dialog-zagolovok-text2{
+font-weight: 350;
+font-size: 16px;
+line-height: 125%;
+text-align: center;
+}
+
+.underline{
+    color: black;
+}
+
+</style>
 
 </head>
 <body>
     
-    <div class="stranica">
-        <div class="burger-menu-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <form class="dialog">
+        <div class="dialog-zagolovok">
+            <div class="dialog-zagolovok-text1"><h3>На каком устройстве вы посещаете наш сайт ?</h3></div>
+            <div class="dialog-zagolovok-text2"><P>Для удобства выберите подходящтй для вас вариант!</P></div>
+        </div><br><br><br><br>
+        <div class="links"><br>
+        <a href="desktop.html">Компьютерная версия</a><br><br><hr><br>
+        <a href="mobile.html" >Мобильная версия</a><br><br>
         </div>
-        
-        <div class="burger-menu">
-            <ul>
-                <li><a class="aa" style="color: white;" href="#o-kompanii">О Компании</a></li>
-                <li><a class="aa" style="color: white;" href="#">Доставка и оплата</a></li>
-                <li><a class="aa" style="color: white;" href="#kontacti">Контакты</a></li><br><hr><br>
-                <li>
-                    <div class="time"><img src="images/clock.svg" alt=""><div>Пн-Вс 9:00 - 19:00</div></div><br>
-                    <div class="phone"><img src="images/phone.svg" alt=""><div>+7 800 888 88 88</div></div>
-                </li>
-            </ul>
-        </div>
-
-<div class="head">
-    <img class="bg1" src="images/Mask group 1.png" alt="Image">
-    <div class="shapka">
-        <div class="logo-and-menu">
-            <div class="logo">
-                <div class="logo2">
-                    <img src="images/Vector 2.svg" alt="Image">
-                </div>
-            </div>
-            <div class="menu">
-                <a class="aa" href="#o-kompanii">О Компании</a><a class="aa" href="#">Доставка и Оплата</a><a class="aa" href="#kontacti">Контакты</a>
-            </div>
-        </div>
-        <div class="info-and-button">
-            <div class="time"><img src="images/clock.svg" alt=""><div>Пн-Вс 9:00 - 19:00</div></div>
-            <div class="phone"><img src="images/phone.svg" alt=""><div>+7 800 888 88 88</div></div>
-        </div>
-    </div>
-    <div class="zagolovok" id="back">
-        <div class="zagolovok-texts">
-            <p class="zagolovok-text-1">наша компания занимается</p>
-            <p class="zagolovok-text-2">лесозаготовкой</p>
-            <p class="zagolovok-text-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-        </div>
-        <button onclick="popup.showModal()" class="btn">оставить заявку</button>
-        <div>
-        <dialog id="popup">
-            <div class="nazad">
-               <button class="back" onclick="location.reload()"><img src="images/Икс.svg" alt=""></button>
-            </div>
-            <form class="dialog" method="popup">
-            <div class="dialog-zagolovok">
-                <div class="dialog-zagolovok-text1"><h3>ЗАПОЛНИТЕ ФОРМУ</h3></div>
-                <div class="dialog-zagolovok-text2"><P>И в ближайшее время сотрудник нашей компании свяжется с Вами</P></div>
-            </div>
-            <div class="inputs-and-button">
-            <input class="input inpt1" type="text" placeholder="Имя"><br>
-            <input class="input inpt2" type="number" placeholder="Телефон"><br>
-            <input class="input inpt3" type="email" placeholder="Email"><br>
-                <input type="submit" value="Отправить" class="dialog-btn" onclick="saveData()"><br>
-            </div>
-                <div class="checkbox-and-text">
-                    <input class="check" type="checkbox"><small class="konfidencialnost">Отправляя эту форму, вы даете свое согласие на обработку персональных данных в соответствии с<br> нашей <a href="#" class="underline">Политикой конфиденциальности.</a></small>
-                </div>
-            </form>
-        </dialog>
-    </div>
-    </div>
-    <div class="kategory">
-        <div class="cards">
-            <div class="kategorya">
-                <div class="group1">
-                    <div class="podgroup">
-                        <img src="images/Vector.svg" alt="">
-                    </div><br>
-                    <div class="nazvaniye1">
-                        <p class="name1">Пиловочник хвойных пород</p>
-                        <p class="text1">Сегодня этот текст<br>используют практически все дизайнеры, набирающие<br>рыбу латиницей.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="line">
-                <svg width="2" height="77" viewBox="0 0 2 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.9" d="M1 0.5L0.999994 76.5" stroke="#E0E0E0" />
-                </svg>
-            </div>
-            <div class="kategorya">
-                <div class="group2">
-                    <div class="podgroup">
-                        <img src="images/Vector (1).svg" alt="">
-                    </div><br><br>
-                    <div class="nazvaniye2">
-                        <p class="name2">Уголь древесный</p>
-                        <p class="text2">Сегодня этот текст<br>используют практически все дизайнеры, набирающие<br>рыбу латиницей.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="line">
-                <svg width="2" height="77" viewBox="0 0 2 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.9" d="M1 0.5L0.999994 76.5" stroke="#E0E0E0" />
-                </svg>
-            </div>
-            <div class="kategorya">
-                <div class="group3">
-                    <div class="podgroup">
-                        <img src="images/Group.svg" alt="">
-                    </div><br><br>
-                    <div class="nazvaniye3">
-                        <p class="name3">Пиломатериалы</p>
-                        <p class="text3">Сегодня этот текст<br>используют практически все дизайнеры, набирающие<br>рыбу латиницей.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="line">
-                <svg width="2" height="77" viewBox="0 0 2 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.9" d="M1 0.5L0.999994 76.5" stroke="#E0E0E0" />
-                </svg>
-            </div>
-            <div class="kategorya">
-                <div class="group4">
-                    <div class="podgroup">
-                        <img src="images/Group (1).svg" alt="">
-                    </div><br><br>
-                    <div class="nazvaniye4">
-                        <p class="name4">Европоддоны</p>
-                        <p class="text4">Сегодня этот текст<br>используют практически все дизайнеры, набирающие<br>рыбу латиницей.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="line">
-                <svg width="2" height="77" viewBox="0 0 2 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.9" d="M1 0.5L0.999994 76.5" stroke="#E0E0E0" />
-                </svg>
-            </div>
-            <div class="kategorya">
-                <div class="group5">
-                    <div class="podgroup">
-                        <img src="images/Vector (2).svg" alt="">
-                    </div><br>
-                    <div class="nazvaniye5">
-                        <p class="name5">Техн.древесина “лежнёвка”</p>
-                        <p class="text5">Сегодня этот текст<br>используют практически все дизайнеры, набирающие<br>рыбу латиницей.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="main" id="o-kompanii">
-    <div class="kompany">
-        <div class="fon">
-            <img class="line-in-fon" src="images/Line 48.svg" alt="">
-            <img class="bg2-1" src="images/Изобрвжение.png" alt="">
-            <img class="bg2-2" src="images/Mask group 2 1.png" alt="">
-        </div>
-        <div class="text-block">
-            <div class="frame">
-                <div class="frame-zagolovok">
-                    <div class="frame-zagolovok-text">
-                        <p class="frame-header"><span class="frame-zagolovok-line">О Ко</span>мпании</p>
-                    </div>
-                    </div>
-                    <div class="podframe">
-                        <div class="head-podframe">Quam adipisci velit, sed quia numquam eius modi tempora incidunt!</div>
-                        <div class="paragraf-podframe">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia est.</div>
-                    </div>
-                    <button class="btn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="production">
-        <div class="production-zagolovok">
-            <div class="production-zagolovok-block">
-                <img src="images/Иконка _Наша продукция_.svg" alt="">
-                <p class="nasha-productciya">Наша продукция</h1>
-            </div>
-            <div class="strelky">
-                <button class="strelka-suda">
-                    <img src="images/Vector 11.svg" alt="">
-                </button>
-                <button class="strelka-tuda">
-                    <img src="images/Vector 12.svg" alt="">
-                </button>
-            </div>
-        </div>
-        <div class="production-cards">
-            <div class="production-card">
-                <div class="production-img">
-                    <div class="production-img-fon">
-                        <img src="images/Rectangle.svg" alt="">
-                    </div>
-                </div>
-                <div class="production-text-block">
-                    <p class="ugol-text-name1">Уголь древесный</p>
-                    <p class="ugol-text1">Уголь для промышленных<br>предприятий мелкой фракции</p>
-                </div>
-            </div>
-            <div class="production-card">
-                <div class="production-img">
-                    <div class="production-img-fon">
-                        <img src="images/Rectangle.svg" alt="">
-                    </div>
-                </div>
-                <div class="production-text-block">
-                    <p class="ugol-text-name1">Уголь древесный</p>
-                    <p class="ugol-text1">Уголь для промышленных<br>предприятий мелкой фракции</p>
-                </div>
-            </div>
-            <div class="production-card">
-                <div class="production-img">
-                    <div class="production-img-fon">
-                        <img src="images/Rectangle.svg" alt="">
-                    </div>
-                </div>
-                <div class="production-text-block">
-                    <p class="ugol-text-name1">Уголь древесный</p>
-                    <p class="ugol-text1">Уголь для промышленных<br>предприятий мелкой фракции</p>
-                </div>
-            </div>
-            <div class="production-card">
-                <div class="production-img">
-                    <div class="production-img-fon">
-                        <img src="images/Rectangle.svg" alt="">
-                    </div>
-                </div>
-                <div class="production-text-block">
-                    <p class="ugol-text-name1">Уголь древесный</p>
-                    <p class="ugol-text1">Уголь для промышленных<br>предприятий мелкой фракции</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="footer">
-    <div class="in-footer">
-        <div class="logo-width-text">
-            <img class="footer-logo" src="images/Vector 2.svg" alt="">
-            <p class="text-pod-logo">Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit, sed do eiusmod tempor<br>incididunt.</p>
-        </div>
-    <div class="footer-kategories">
-        <img src="images/Rectangleft.svg" alt="">
-        <div class="footer-production">
-            <p class="productciya">ПРОДУКЦИЯ</p>
-          <p><a href="" class="footer-razdels aa">Пиловочник</a></p>
-          <p><a href="" class="footer-razdels aa">Уголь</a></p>
-          <p><a href="" class="footer-razdels aa">Пиломатериалы</a></p>
-          <p><a href="" class="footer-razdels aa">Европоддоны</a></p>
-          <p><a href="" class="footer-razdels aa">Тех. Дрова</a></p>
-        </div>
-        <img src="images/Rectangleft.svg" alt="">
-        <div class="footer-information">
-           <p class="">ИНФОРМАЦИЯ</p>
-           <p><a href="" class="footer-razdels aa">О Компании</a></p>
-           <p><a href="" class="footer-razdels aa">Доставка и Оплата</a></p>
-           <p><a href="" class="footer-razdels aa">Контакты</a></p>
-       </div>
-        <img src="images/Rectangleft.svg" alt="">
-        <div class="footer-contacts">
-            <p class="contacts" id="kontacti">КОНТАКТЫ</p>
-            <p class="footer-razdels">info@form.com</p>
-            <p class="footer-razdels">882-587-3025</p>
-            <p class="footer-razdels">6116 Willa River Suite 610</p>
-        </div>
-    </div>
-</div>
-    <div class="folow">
-        <p>ПОДПИСАТЬСЯ НА НОВОСТИ</p>
-        <p class="folow-text">Duis autem vel eum</p>
-        <form class="footer-forma" action="">
-            <input class="footer-input" type="email" placeholder="Email" id="email"><button class="footer-btn" id="submitBtn">ОСТАВИТЬ ЗАЯВКУ</button>
-        </form>
-    </div>
-</div>
-</div>
-
-<script>
-    
-    function toggleMenu() {
-            var menuIcon = document.querySelector('.burger-menu-icon');
-            var menu = document.querySelector('.burger-menu');
-            menuIcon.classList.toggle('open');
-            menu.classList.toggle('open');
-        }
-    
-    </script>
-
-    <script src="js/index.js"></script>
-    <script src="js/email.js"></script>
 
 </body>
 </html>
