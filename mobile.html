@@ -267,15 +267,12 @@
 </div>
 
 <script>
-    
-    function toggleMenu() {
-            var menuIcon = document.querySelector('.burger-menu-icon');
-            var menu = document.querySelector('.burger-menu');
-            menuIcon.classList.toggle('open');
-            menu.classList.toggle('open');
-        }
-    
-    </script>
+    document.querySelectorAll('.strelka-suda, .strelka-tuda').forEach(button => {
+    button.addEventListener('click', function() {
+        alert('В данный момент это весь асортимент наших услуг лесозаготовки!');
+    });
+});
+</script>
 
     <script src="js/index.js"></script>
     <script src="js/email.js"></script>
