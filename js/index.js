@@ -8,15 +8,19 @@ function saveData() {
     let phone = phoneInput.value.trim();
     let email = emailInput.value.trim();
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!name || !phone || !email) {
         alert('Пожалуйста, заполните все поля формы.');
+    } else if (!emailRegex.test(email)) {
+        alert('Пожалуйста, введите корректный email.');
     } else if (!checkbox.checked) {
         alert('Пожалуйста, дайте согласие на обработку персональных данных.');
     } else {
         localStorage.setItem('userName', name);
         localStorage.setItem('userPhone', phone);
         localStorage.setItem('userEmail', email);
-        alert(`Спасибо, ${name}! Ваши данные успешно отправлены!`);
+        alert(`Спасибо, ${name} ! Ваша заявка успешно отправлена! Ожидайте в скором времени мы с вами свяжемся!`);
         nameInput.value = '';
         phoneInput.value = '';
         emailInput.value = '';

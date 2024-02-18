@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: "Manrope", sans-serif;
+    scroll-behavior: smooth;
 }
 
 .burger-menu-icon {
@@ -107,6 +108,27 @@ left: -1em;
 content: ">";
 color: transparent;
 }
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 170px;
+    height: 20px;
+    font-size: 16px;
+    gap: 10px;
+    }
+    
+    .phone{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 157px;
+    height: 20px;
+    font-size: 16px;
+    }
 
 .head{
 width: 464px;
