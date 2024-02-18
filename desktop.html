@@ -9,22 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <title>ЛЕСОЗАГОТОВКА</title>
-
-<style>
-   .production-cards {
-    overflow-x: scroll;
-    white-space: nowrap; /* Для горизонтального расположения элементов в одну строку */
-    -ms-overflow-style: none; /* Убираем полосу прокрутки в Internet Explorer */
-    scrollbar-width: none; /* Убираем полосу прокрутки в Firefox */
-}
-
-.production-cards::-webkit-scrollbar {
-    display: none; /* Скрываем полосу прокрутки в Chrome, Safari и Opera */
-}
-
-
-</style>
-
 </head>
 <body>
     
@@ -190,16 +174,16 @@
                     <div class="frame-zagolovok-text">
                         <p class="frame-header"><span class="frame-zagolovok-line">О Ко</span>мпании</p>
                     </div>
-                    </div>
+                </div>
                     <div class="podframe">
                         <div class="head-podframe">Quam adipisci velit, sed quia numquam eius modi tempora incidunt!</div>
                         <div class="paragraf-podframe">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia est.</div>
                     </div>
-                    <button class="btn">Подробнее</button>
-                </div>
+                    <button class="btn podrobnee">Подробнее</button>
             </div>
         </div>
     </div>
+</div>
     <div class="production">
         <div class="production-zagolovok">
             <div class="production-zagolovok-block">
@@ -284,7 +268,6 @@
             </div>
         </div>
     </div>
-</div>
 
 <div class="footer">
     <div class="in-footer">
@@ -329,10 +312,11 @@
 </div>
 
 <script>
-    
-    
-
-
+    document.querySelectorAll('.podrobnee').forEach(button => {
+    button.addEventListener('click', function() {
+        alert('В данный момент это весь асортимент наших услуг лесозаготовки!');
+    });
+});
 </script>
 
     <script src="js/index.js"></script>
