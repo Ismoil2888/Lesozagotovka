@@ -9,6 +9,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <title>ЛЕСОЗАГОТОВКА</title>
+
+<style>
+   .production-cards {
+    overflow-x: scroll;
+    white-space: nowrap; /* Для горизонтального расположения элементов в одну строку */
+    -ms-overflow-style: none; /* Убираем полосу прокрутки в Internet Explorer */
+    scrollbar-width: none; /* Убираем полосу прокрутки в Firefox */
+}
+
+.production-cards::-webkit-scrollbar {
+    display: none; /* Скрываем полосу прокрутки в Chrome, Safari и Opera */
+}
+
+
+</style>
+
 </head>
 <body>
     
@@ -191,15 +207,37 @@
                 <p class="nasha-productciya">Наша продукция</h1>
             </div>
             <div class="strelky">
-                <button class="strelka-suda">
+                <button class="strelka-suda" onclick="scrollLeft()">
                     <img src="images/Vector 11.svg" alt="">
                 </button>
-                <button class="strelka-tuda">
+                <button class="strelka-tuda" onclick="scrollRight()">
                     <img src="images/Vector 12.svg" alt="">
                 </button>
             </div>
         </div>
         <div class="production-cards">
+            <div class="production-card">
+                <div class="production-img">
+                    <div class="production-img-fon">
+                        <img src="images/Rectangle.svg" alt="">
+                    </div>
+                </div>
+                <div class="production-text-block">
+                    <p class="ugol-text-name1">Уголь древесный</p>
+                    <p class="ugol-text1">Уголь для промышленных<br>предприятий мелкой фракции</p>
+                </div>
+            </div>
+            <div class="production-card">
+                <div class="production-img">
+                    <div class="production-img-fon">
+                        <img src="images/Rectangle.svg" alt="">
+                    </div>
+                </div>
+                <div class="production-text-block">
+                    <p class="ugol-text-name1">Уголь древесный</p>
+                    <p class="ugol-text1">Уголь для промышленных<br>предприятий мелкой фракции</p>
+                </div>
+            </div>
             <div class="production-card">
                 <div class="production-img">
                     <div class="production-img-fon">
@@ -292,12 +330,8 @@
 
 <script>
     
-    function toggleMenu() {
-            var menuIcon = document.querySelector('.burger-menu-icon');
-            var menu = document.querySelector('.burger-menu');
-            menuIcon.classList.toggle('open');
-            menu.classList.toggle('open');
-        }
+    
+
 
 </script>
 

@@ -27,3 +27,22 @@ function saveData() {
         document.getElementById('popup').close();
     }
 }
+
+
+function toggleMenu() {
+    var menuIcon = document.querySelector('.burger-menu-icon');
+    var menu = document.querySelector('.burger-menu');
+    menuIcon.classList.toggle('open');
+    menu.classList.toggle('open');
+}
+
+function scrollRight() {
+document.querySelector('.production-cards').scrollBy({
+left: 300,
+behavior: 'smooth'
+});
+}
+
+document.querySelector('.strelka-suda').addEventListener('click', function() {
+document.querySelector('.production-cards').scrollBy(-300, 0);
+});
