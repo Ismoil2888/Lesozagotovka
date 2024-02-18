@@ -1,25 +1,25 @@
-const nameInput = document.querySelector('.input[placeholder="Имя"]');
-const phoneInput = document.querySelector('.input[placeholder="Телефон"]');
-const emailInput = document.querySelector('.input[placeholder="Email"]');
+function saveData() {
+    let nameInput = document.querySelector('.inpt1');
+    let phoneInput = document.querySelector('.inpt2');
+    let emailInput = document.querySelector('.inpt3');
+    let checkbox = document.querySelector('.check');
 
-const getName = () => nameInput.value;
-const getPhone = () => phoneInput.value;
-const getEmail = () => emailInput.value;
+    let name = nameInput.value.trim();
+    let phone = phoneInput.value.trim();
+    let email = emailInput.value.trim();
 
-const saveData = () => {
-    const name = getName();
-    const phone = getPhone();
-    const email = getEmail();
-  
-    localStorage.setItem('formData', JSON.stringify({ name, phone, email }));
-  };
-
-  const sendData = () => {
-    const data = JSON.parse(localStorage.getItem('formData'));
-  
-    fetch('/api/save-data', {
-      method: 'POST',
-      body: JSON.stringify(data),
-    });
-  };
-  
+    if (!name || !phone || !email) {
+        alert('Пожалуйста, заполните все поля формы.');
+    } else if (!checkbox.checked) {
+        alert('Пожалуйста, дайте согласие на обработку персональных данных.');
+    } else {
+        localStorage.setItem('userName', name);
+        localStorage.setItem('userPhone', phone);
+        localStorage.setItem('userEmail', email);
+        alert(`Спасибо, ${name}! Ваши данные успешно отправлены!`);
+        nameInput.value = '';
+        phoneInput.value = '';
+        emailInput.value = '';
+        document.getElementById('popup').close();
+    }
+}

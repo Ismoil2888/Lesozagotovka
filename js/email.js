@@ -1,8 +1,8 @@
 document.getElementById('submitBtn').addEventListener('click', function(event) {
     event.preventDefault();
 
-    var emailInput = document.getElementById('email');
-    var email = emailInput.value.trim();
+    let emailInput = document.getElementById('email');
+    let email = emailInput.value.trim();
 
     if (email) {
         localStorage.setItem('userEmail', email);
