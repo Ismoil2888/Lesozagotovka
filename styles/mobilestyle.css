@@ -110,25 +110,25 @@ color: transparent;
 }
 
 .time{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 170px;
-    height: 20px;
-    font-size: 16px;
-    gap: 10px;
-    }
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: row;
+width: 170px;
+height: 20px;
+font-size: 16px;
+gap: 10px;
+}
     
-    .phone{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
-    width: 157px;
-    height: 20px;
-    font-size: 16px;
-    }
+.phone{
+display: flex;
+align-items: center;
+flex-direction: row;
+gap: 10px;
+width: 157px;
+height: 20px;
+font-size: 16px;
+}
 
 .head{
 width: 464px;
@@ -674,11 +674,12 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-gap: 50px;
+gap: 25px;
 width: 464px;
-height: 840px;
+height: 900px;
 background-color: #1C1C1C;
 margin-top: 80px;
+text-align: center;
 }
 
 .in-footer{
@@ -698,7 +699,6 @@ margin-top: 30px;
 
 .footer-logo{
 margin-bottom: 20px;
-margin-left: 45%;
 }
 
 .text-pod-logo{
@@ -710,10 +710,9 @@ letter-spacing: 0.01em;
 
 .footer-kategories{
 display: flex;
-align-items: flex-start;
+align-items: center;
 justify-content: center;
 flex-direction: column;
-margin-left: 45%;
 gap: 40px;
 width: 260px;
 height: 418px;
@@ -722,18 +721,15 @@ color: #FFFFFF;
 
 .footer-information{
 display: flex;
-align-items: flex-start;
-justify-content: flex-start;
+justify-content: center;
 flex-direction: column;
 width: 165px;
 gap: 10px;
-text-align: center;
 }
 
 .footer-production{
 display: flex;
-align-items: flex-start;
-justify-content: flex-start;
+justify-content: center;
 flex-direction: column;
 gap: 6px;
 }
@@ -746,13 +742,11 @@ margin-bottom: 8px;
 font-size: 14px;
 font-weight: 100;
 letter-spacing: 0.01em;
-margin-left: 10px;
 }
 
 .footer-contacts{
 display: flex;
-align-items: flex-start;
-justify-content: flex-start;
+justify-content: center;
 flex-direction: column;
 gap: 10px;
 width: 200px;
@@ -761,24 +755,18 @@ width: 200px;
 .folow{
 color: #FFFFFF;
 display: flex;
-align-items: flex-start;
-justify-content: flex-start;
+align-items: center;
+justify-content: center;
 flex-direction: column;
 gap: 15px;
 width: 270px;
 height: 160px;
-margin-top: 20px;
-}
-
-.podpiska-text{
-margin-left: 40px;
 }
 
 .folow-text{
 font-weight: 100;
 letter-spacing: 0.01em;
 font-family: "Manrope", sans-serif;
-margin-left: 80px;
 }
 
 .footer-forma{
