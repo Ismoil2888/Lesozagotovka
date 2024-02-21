@@ -40,7 +40,7 @@ transform: scaleX(1);
 }
 
 .dialog{
-background: url(../images/dialog-background.png);
+background: url(../images/backgroun-images/dialog-background.png);
 border-radius: 10px;
 border: 1px solid #BCCAD2;
 display: flex;

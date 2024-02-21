@@ -786,7 +786,7 @@ padding: 12px 65px 12px 10px;
 padding-left: 30px;
 width: 33px;
 height:15px;
-background-image: url(../images/Vectoremail.svg);
+background-image: url(../images/icons/Vectoremail.svg);
 background-repeat: no-repeat;
 background-position: 7px 50%;
 }
@@ -847,7 +847,7 @@ height: 555px;
 width: 416px;
 transform: translate(-50%, -50%);
 z-index: 100;
-background: url(../images/dialog-background.png);
+background: url(../images/backgroun-images/dialog-background.png);
 border: 0;
 border-radius: 10px;
 }
@@ -942,21 +942,21 @@ height: 50px;
 }
 
 .inpt1{
-background-image: url(../images/user.svg);
+background-image: url(../images/icons/user.svg);
 background-repeat: no-repeat;
 background-position: 15px 50%;
 padding-left: 50px;
 }
 
 .inpt2{
-background-image: url(../images/tell.svg);
+background-image: url(../images/icons/tell.svg);
 background-repeat: no-repeat;
 background-position: 15px 50%;
 padding-left: 50px;
 }
 
 .inpt3{
-background-image: url(../images/Почта\ 3.svg);
+background-image: url(../images/icons/Почта\ 3.svg);
 background-repeat: no-repeat;
 background-position: 15px 50%;
 padding-left: 50px;
