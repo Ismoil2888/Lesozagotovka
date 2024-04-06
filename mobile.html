@@ -44,9 +44,9 @@
     </div>
     <div class="zagolovok">
         <div class="zagolovok-texts">
-            <p class="zagolovok-text-1">наша компания занимается</p>
-            <p class="zagolovok-text-2">лесозаготовкой</p>
-            <p class="zagolovok-text-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,<br>
+            <p class="zagolovok-text-1 skeleton">наша компания занимается</p>
+            <p class="zagolovok-text-2 skeleton">лесозаготовкой</p>
+            <p class="zagolovok-text-3 skeleton">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,<br>
                 sed diam nonummy nibh euismod tincidunt ut laoreet<br> dolore magna aliquam erat volutpat.</p>
         </div>
         <button onclick="popup.showModal()" class="btn">оставить заявку</button>
@@ -271,6 +271,14 @@
         alert('В данный момент это весь асортимент наших услуг лесозаготовки!');
     });
 });
+
+const allSkeletonis = document.querySelectorAll('.skeleton')
+
+window.addEventListener('load', function() {
+    allSkeletonis.forEach(item=> {
+        item.classList.remove('skeleton')
+    })
+})
 </script>
 
     <script src="js/index.js"></script>
