@@ -1000,3 +1000,24 @@ gap: 10px;
 width: 296px;
 height: 42px;
 }
+
+.skeleton{
+    position: relative;
+}
+
+
+.skeleton::before{
+    content: 'Loading...';
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: #1C1C1C;
+    color: #00e5ff;
+    background-size: 200%;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 70%;
+}

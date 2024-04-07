@@ -12,7 +12,7 @@
 </head>
 <body>
     
-<div class="stranica">
+<div class="stranica skeleton">
 <div class="head">
         <div class="burger-menu-icon" onclick="toggleMenu()">
             <span></span>
@@ -269,6 +269,14 @@
     document.querySelectorAll('.strelka-suda, .strelka-tuda, .podrobnee').forEach(button => {
     button.addEventListener('click', function() {
         alert('В данный момент это весь асортимент наших услуг лесозаготовки!');
+    });
+});
+
+const aallSkeletonis = document.querySelectorAll('.skeleton');
+
+window.addEventListener('load', function() {
+    allSkeletonis.forEach(item=> {
+        item.classList.remove('skeleton');
     });
 });
 </script>
